@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+#app {
+  padding: 20px;
+}
+code {
+  margin-inline: 10px;
+}
+h1 {
+  text-align: center;
+}
+form {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+form input[type="submit"] {
+  width: 100px;
+  height: 50px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  font-size: 25px;
+}
+.table {
+  display: flex;
+  flex-wrap: wrap;
+}
+.cell {
+  background-color: black;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* The animation code */
+@keyframes blink {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+.running {
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+.success {
+  background-color: greenyellow;
+}
+.error {
+  background-color: red;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <h1>Single and Multi-threaded Concurrency in JavaScript</h1>
+      <p style="font-weight: bolder">
+        (open only in new tab, The preview tab in codesandbox doesn't work
+        because of an issue with iframe and SharedArrayBuffer)
+      </p>
+      <div style="display: flex; align-items: center">
+        Perform tasks concurrently with a concurrencyLimit. Successful task
+        =&nbsp
+        <div class="cell success"></div>
+        &nbspErrored task =&nbsp
+        <div class="cell error"></div>
+        &nbspPending task =&nbsp
+        <div class="cell running"></div>
+        .
+      </div>
+      <form>
+        <label>
+          Concurrency limit
+          <input
+            type="number"
+            name="concurrencyLimit"
+            min="1"
+            max="100"
+            value="25"
+          />
+        </label>
+        <label>
+          Items
+          <input
+            type="number"
+            name="itemCount"
+            min="500"
+            max="10000"
+            value="500"
+          />
+        </label>
+        <label>
+          Single-threaded
+          <input type="radio" name="threadType" value="singleThreaded" />
+        </label>
+        <label>
+          Multi-threaded
+          <input type="radio" checked name="threadType" value="multiThreaded" />
+        </label>
+        <label>
+          Threads
+          <input type="number" name="threadCount" min="1" max="30" value="5" />
+        </label>
+        <input type="submit" value="Run" />
+      </form>
+      <p>Time Taken: <code></code> milli seconds</p>
+      <div class="table"></div>
+    </div>
+
+    <script src="./index.js" type="module"></script>
+  </body>
+</html>
